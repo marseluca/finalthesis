@@ -1,0 +1,9 @@
+1. Specify the cost function
+2. Explain the way you optimizie being indipendent on the specs
+3. Problem formulation: Include assumptions: starting by a generic point of view (problem statement + assumptions), specify that the warehouse has that layout, specify the maximum velocity and whether you are using orientation. The  important is that you don't include the values. Naming the variables. Static obstacles, no dynamic obstacles except for the robots. 
+4. Then you go to the proposed solutions. 
+5. Results: when you go to the results, you can include the values and need to specify why you chose these values, for example because they are more suitable for a given situation etc. In general you have to justify them. So you have to select values in such a way you can show potentialities or drawbacks of the algorithm (be honest).
+6. Keep two approaches: for the sate of the art you didn't find many solutions that keep the path, or also justify with some scenarios in which you cannot modify the path. 
+7. Include the path changing algorithm in the state of the art but its not mandatory to include in the thesis
+
+Prioritized: histogram of the max velocities, maybe add the avg instead of the max, and try to compare the profiles. Add different heuristics.  

@@ -1,0 +1,7 @@
+- Remove upper limit from the pie charts
+- Change the colors of the pie chart
+- Invert dots on the robots plots + remove legend and write in the caption
+- Explain and clarify in the report the meaning of the 7 robots plots
+- Edit the line of the safety margin so that it is dotted
+
+10-12pt font size

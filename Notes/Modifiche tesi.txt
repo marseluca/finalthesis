@@ -1,0 +1,9 @@
+- Sezione 4.1 [paragrafo rimosso tra "mesh of triangles" e "The map of the environment is composed".
+- Sezione 4.1 [Figura 5 rimosa, fusa con Figura 6]
+- Sezione 4.2 [Simply merged sections 4.2 and 4.3. Removed any reference to CDT-RRT*]
+- Sezione 4.2 [Added the last sentence]
+- Sezione 3.2 [Added equations]
+- Table 1 [Removed and its content integrated in the text]
+- Table 3 and 4 reduced in size
+- Figure 13 [Pushed all the figures to the Appendices]
+

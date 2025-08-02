@@ -1,0 +1,20 @@
+- Make presentation more clear
+- Presentation is too long
+- Cover either don't put image or put a different image than that of the slides
+- Careful with the footer and put also name and date on it (put it on the right side)
+- Don't write "Context" but write "Motivation". Put an image in it (amazon-like but not really amazon)
+- For the slide: start immediately from the goal, not from the background, stating clearly that you cannot modify the paths and also the elements that you have, the obstacles are not those of the environment, want a scalable algorithm (even if yours is not scalable). Merge motivation and goal in one slide.
+Centralized approach can be your goal. 
+Merge slide 5 and 6
+- Only then you can start with the background, talking also about the online approach (only after).
+- State that MINLP+GA are the only approaches that YOU found
+- Where you put the equations, put the explanation of the variables on the right, and REMOVE TEXT
+- Put as less text as possible
+- Don't introduce trajectory generation. It's a waste of slides. Just put it in the playground presentation
+- Put explosion icons on collisions
+- Call the cost function of the brute-force approach not cost function (call it CRITERION)
+- Stress more the Pareto frontier
+- Make one complete comparison b/w the first two approach to the initial step (INITIAL | BRUTE | PRIORITIZED)
+- Reduce the number of pictures for the trajectories
+- WATCH OUT the results with 100 individuals
+
