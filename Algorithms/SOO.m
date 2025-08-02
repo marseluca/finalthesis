@@ -6,14 +6,14 @@ close all
 global nRobots samplingTime pathColors maxVelocity maxAcceleration paths delta_s;
 
 
-addpath("C:\Users\Luca\Uni\Thesis\Algorithms\Scripts");
-addpath("C:\Users\Luca\Uni\Thesis\Algorithms\Scripts\Interpolators"); % Contains MEX-files to speed up execution
-addpath("C:\Users\Luca\Uni\Thesis\Algorithms\SOO_opt_functions");
+addpath("C:\Users\Luca\Desktop\finalthesis\Algorithms\Scripts");
+addpath("C:\Users\Luca\Desktop\finalthesis\Algorithms\Scripts\Interpolators"); % Contains MEX-files to speed up execution
+addpath("C:\Users\Luca\Desktop\finalthesis\Algorithms\SOO_opt_functions");
 
 
 openfig("warehouse.fig");
 paths = {};
-paths = load("C:\Users\Luca\Uni\Thesis\paths_registration.mat").paths_registration;
+paths = load("C:\Users\Luca\Desktop\finalthesis\paths_registration.mat").paths_registration;
 
 nRobots = size(paths,2);
 
@@ -30,12 +30,12 @@ maxVelocity         = 1.5;
 maxAcceleration     = 1;
 
 %% OPTIONS
-animation           = false;
+animation           = true;
 animVelocity        = 7;
 recordAnimation     = true;
 solveCollisions     = true;
-preloadOptimization = false;
-plotVelocities      = false;
+preloadOptimization = true;
+plotVelocities      = true;
 plotCollisions      = false;
 
 samplingTime        = 0.1;
@@ -104,7 +104,6 @@ if solveCollisions
         'CrossoverFraction', 0.6, ...
         'MutationFcn', {@mutationuniform, 0.1},...
         'NonlinearConstraintAlgorithm', 'penalty', ...
-        'PlotFcn','gaplotbestf',...
         'MaxStallGenerations', 1000);
     
         % Call the ga solver
@@ -113,12 +112,12 @@ if solveCollisions
         constraintFun = @(x) o_collision_constraint(x,paths,delta_s);
         
         tic
-        [x_opt, fval, exitflag, output] = ga(objectiveFun, 3*nRobots, [], [], [], [], lb, ub, constraintFun, intcon, options_ga);    
-        output
+        [x_opt,fval,exitflag,output,population,scores] = ga(objectiveFun, 3*nRobots, [], [], [], [], lb, ub, constraintFun, intcon, options_ga);    
+        o_finalOutput(population,scores);
         toc
     else
 
-        x_opt = [0 29.1 0.91 1 5.29 0.36 0 27.39 0.42 1 16.48 0.7 1 21.46 0.46 1 11.71 0.29 0 1.63 0.48];
+        x_opt = [1 20.48 0.6 0 30.68 0.41 1 10.08 0.7 1 38.97 0.86 1 18.69 0.43 0 5.53 0.51 1 2.66 0.34];
 
         %% APPLY THE OPTIMIZED SOLUTION
         for i=1:nRobots
